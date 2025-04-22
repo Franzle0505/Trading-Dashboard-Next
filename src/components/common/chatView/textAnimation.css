@@ -1,0 +1,70 @@
+:root {
+  --animation-delay: 10ms;
+}
+
+span {
+  opacity: 0;
+  animation-name: typewriter;
+  animation-fill-mode: forwards;
+  animation-duration: 0s;
+  animation-delay: calc(var(--animation-order) * var(--animation-delay));
+
+}
+@keyframes typewriter {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes shrink {
+  from {
+    width: 50px;
+    height: 50px;
+  }
+  to {
+    width: 20px; 
+    height: 20px;
+  }
+}
+
+.shrink-animation {
+  animation: shrink 1s ease-in-out forwards; /* Adjust timing and easing as needed */
+}
+
+@keyframes pulse {
+  100% {
+    width: 20px;
+    height: 20px;
+  }
+  0% {
+    width: 30px;
+    height: 30px;
+  }
+  50% {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.pulse-animation {
+  animation: pulse 2s ease-in-out forwards;
+}
